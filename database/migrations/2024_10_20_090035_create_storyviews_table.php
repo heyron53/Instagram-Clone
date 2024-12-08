@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('story_id');
             $table->bigInteger('user_id');
-            $tabke->dateTime('viewed_at');
+            $table->dateTime('viewed_at');
             $table->timestamps();
         });
     }

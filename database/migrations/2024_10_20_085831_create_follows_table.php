@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('follows', function (Blueprint $table) {
             $table->id();
-            $table->constraintId('follower_id')->constrained('users')->onDelete('cascade');
-            $table->constraintId('following_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('follower_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('following_id')->constrained('users')->onDelete('cascade');
             $table->boolean('is_best_friend');
-            $table->timestamps()->default(false);
+            $table->timestamps();
         });
     }
 
