@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/inicio', fn() => view('app'));
+
+Route::get('/', fn() => view('layouts.app'));
+Route::get('/login', fn() => view('layouts.login'));
